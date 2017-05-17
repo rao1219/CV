@@ -1,0 +1,135 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Qi \textsc{Rao}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Contact}
+
+\begin{tabular}{rl}
+    \textsc{EMAIL:} & \href{mailto:raoqi1219@gmail.com}{raoqi1219@gmail.com}\\
+    \textsc{Phone:}     & +86 18986561219\\
+    \textsc{Website:}     & \href{http://raoqi.sxl.cn/}{raoqi.sxl.cn/}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & Research Intern at \textsc{ICT, Chinese Academic of Science} \\\textsc{Jan 2016}&\emph{Multimedia Research Group}\\&\footnotesize{Researched in visual tracking field, in particular human tracking, with emphasis on speed acclerating and performance improving, also taking into account the challenge of significant appearance variations as well as complex interferences. Became familiar with basic deep learning knowledge and tools.}\\\multicolumn{2}{c}{} \\
+ \textsc{June-Sept 2015} & Developer Intern at \textsc{Tsinghua University}  \\&\emph{Division of Computer Software}\\&\footnotesize{Most work done in Node.js. Assisted in development of an online medical care system.}\\\multicolumn{2}{c}{} \\
+ \textsc{Nov 2015 - Sept 2014} & Research Intern at \textsc{Bupt}  \\&\emph{State Key Laboratory of Networking And Switching Technology}\\&\footnotesize{Took part in innovative projects , with focus on problems about wifi Self-configuration, Load Balance. Became interested in machine learning and data mining technologies.}\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{Aug 2013} - \textsc{current} & Bachelor of Science in Engineering, \textsc{E-Commermerce}\\
+& \textbf{Beijing University of posts and telecommunications}\\
+& \textsc{GPA: 87.45/100}  , ranked \textsc{4/172}\\
+\\
+
+ \textsc{Aug 2013} - \textsc{current} & Bachelor of Science in Engineering, \textsc{Electronic Engineering and}\\
+&  \textsc{Computer Science}\\
+& \textbf{Queey Mary University of London}\\
+& \textsc{GPA: 3.5/4.0}  \\
+\end{tabular}
+
+%Section: Languages
+\section{Projects}
+\begin{tabular}{rl}	
+ \textsc{\href{https://github.com/rao1219/MDNet}{MDNet+}} & \emph{An improved tracking framework for human target}\\
+& Reimplemented MDNet with Caffe. Accelerated the online tracking speed.Imp\\
+& -roved human tracking representation ability with supplementary training on\\
+& self-built dataset.\\
+\\
+
+ \textsc{\href{https://github.com/rao1219/intel_cup-3Dcamera}{PoseDetector}} & \emph{Human pose detection and reminding system}\\
+& Obtained the skeleton information by 3d camera, implemented self-refinement \\
+& algorithm to judge human pose in real-time.\\ 
+\\
+ \textsc{\href{https://github.com/rao1219/olhandicrafts}{Olrenting}} & \emph{A generic E-commerce online shopping framework}\\
+\end{tabular}
+
+\section{Interests}
+\begin{tabular}{rl}
+Artificual Intelligence, Deep Learning, Computer Vision
+\end{tabular}
+
+%Section: Scholarships and additional info
+
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
