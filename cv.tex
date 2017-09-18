@@ -13,8 +13,11 @@
 
 %Setup hyperref package, and colours for links
 \usepackage{hyperref}
+\usepackage{geometry}
+\geometry{a4paper,left=2.5cm,right=2.5cm,top=0.3cm,bottom=0.3cm}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
 
 %FONTS
 \defaultfontfeatures{Mapping=tex-text}
@@ -45,6 +48,7 @@ ItalicFont = Fontin-Italic.otf
 \setlength{\TPVertModule}{\TPHorizModule}
 \textblockorigin{2mm}{0.65\paperheight}
 \setlength{\parindent}{0pt}
+
 
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
@@ -78,7 +82,8 @@ ItalicFont = Fontin-Italic.otf
 \begin{tabular}{rl}
     \textsc{EMAIL:} & \href{mailto:raoqi1219@gmail.com}{raoqi1219@gmail.com}\\
     \textsc{Phone:}     & +86 18986561219\\
-    \textsc{Github:}     & \href{https://github.com/rao1219/}{github.com/rao1219/}
+    \textsc{Github:}     & \href{https://github.com/rao1219/}{github.com/rao1219/} \\
+    \textsc{Website:}     & \href{http://raoqi.sxl.cn/}{raoqi.sxl.cn}
 \end{tabular}
 
 %Section: Work Experience at the top
@@ -86,9 +91,9 @@ ItalicFont = Fontin-Italic.otf
 
 \begin{tabular}{r|p{11cm}}
 
- \textsc{Jun 2017 - Current} & Research Intern at \textsc{Seetatech,Beijing} \\&\footnotesize{Worked as full-time intern under supervision of Jie Zhang and} \href{http://www.jdl.ac.cn/user/sgshan/index_en.htm}{Shiguang Shan.} \footnotesize{Help to remove watermarks on document photos with deep convolutional networks.}\\\multicolumn{2}{c}{} \\
+ \textsc{Jun 2017 - Sept 2017} & Research Intern at \textsc{Seetatech,Beijing} \\&\footnotesize{Worked as full-time intern under supervision of Dr.Jie Zhang and} \href{http://www.jdl.ac.cn/user/sgshan/index_en.htm}{Prof.Shiguang Shan.} \footnotesize{Help to remove watermarks on document photos with deep convolutional networks. Efficiently improve face detector's performance. Projects finished by myself went into production system.}\\\multicolumn{2}{c}{} \\
 
- \textsc{Jan 2016 - Jun 2017} & Research Intern at \textsc{ICT, Chinese Academic of Science} \\&\emph{Multimedia Group}\\&\footnotesize{Researched in visual tracking field, in particular human tracking, with emphasis on speed accelerating and performance improving.Became familiar with basic deep learning knowledge and tools.}\\\multicolumn{2}{c}{} \\
+ \textsc{Jan 2016 - Jun 2017} & Research Intern at \textsc{ICT, Chinese Academic of Science} \\&\emph{Multimedia Group}\\&\footnotesize{Researched in visual tracking field, in particular human tracking, with emphasis on speed accelerating and performance improving. Familiar with basic deep learning knowledge and tools.}\\\multicolumn{2}{c}{} \\
  \textsc{June-Sept 2015} & Developer Intern at \textsc{Tsinghua University}  \\&\emph{Division of Computer Science And Technology}\\& \footnotesize{Worked as a developer intern with }\href{https://yutian.li/}{Yutian Li.} \footnotesize{Most work done in Node.js. Assisted in development of an online medical care system.}\\\multicolumn{2}{c}{} \\
  \textsc{Nov 2015 - Sept 2014} & Research Intern at \textsc{Bupt}  \\&\emph{State Key Laboratory of Networking And Switching Technology}\\&\footnotesize{Took part in innovative projects , with focus on problems about wifi Self-configuration, Load Balance. Became interested in machine learning and data mining technologies.}\\\multicolumn{2}{c}{} \\
 \end{tabular}
@@ -96,7 +101,10 @@ ItalicFont = Fontin-Italic.otf
 \section{Education}
 \begin{tabular}{rl}	
 
-
+ \textsc{Mar 2018} - \textsc{} & Ph.D candidate\\
+& \textbf{University of Technology Sydney}\\
+& Under supervision of \href{https://sites.google.com/site/ianyyang2016/}{Prof.Yi Yang}. I will take a half gap year and return.\\
+\\
  \textsc{Aug 2013} - \textsc{current} & Bachelor of Science(Engineering) with Honours, \textsc{E-Commerce}\\
 &\textsc{Electronic Engineering and} \textsc{Computer Science}\\
 & \textbf{Queen Mary University of London}\\
@@ -105,15 +113,22 @@ ItalicFont = Fontin-Italic.otf
 
  \textsc{Aug 2013} - \textsc{current} & Bachelor of Management, \textsc{E-Commerce Engineering with Law}\\
 & \textbf{Beijing University of posts and telecommunications}\\
-& Major ranking: \textsc{4/172}  \\
+& Overall GPA:\textsc{87.42}, ranking: \textsc{4/172}  \\
 
 \end{tabular}
 
 %Section: Languages
 \section{Projects}
 \begin{tabular}{rl}	
+ \textsc{\href{}{WaveNet}} & \emph{Deep fully-convolutional network for waterwave removal}\\
+& Designed a deep fully-convolutional network for the specific task of removing \\
+& waterwave on document photoes, whose architecture combined the FCN and \\
+& ResNet-101. Experiments evaluated with different loss function design, including \\
+& pixel-wise loss , perceptual loss and GAN. This work improved the performance\\
+& of face detection and finally went into production system.\\
+\\
  \textsc{\href{https://github.com/rao1219/MDNet}{MDNet+}} & \emph{An improved tracking framework for human target}\\
-& Reimplemented MDNet with Caffe. Accelerated the online tracking speed.Imp\\
+& Reimplemented MDNet with Caffe. Accelerated the online tracking speed. Imp\\
 & -roved human tracking representation ability with supplementary training on\\
 & self-built dataset.\\
 \\
