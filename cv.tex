@@ -89,20 +89,20 @@ ItalicFont = Fontin-Italic.otf
 
 \begin{tabular}{r|p{11cm}}
 
- \textsc{Nov 2017 - Current} & Researcher at \textsc{SenseTime,Beijing} \\&\footnotesize{Work as full-time researcher under supervision of Dr.Xingyu Zeng. Responsible for ConvNet models deploying including 2d detection, landmarks, face direction,etc. Also concentrate on research about object detection and instance segmentation.}\\\multicolumn{2}{c}{} \\
+ \textsc{Nov 2017 - Oct 2018} & Research Intern at \textsc{SenseTime,Beijing} \\&\footnotesize{Worked as full-time intern in autopilot detection group, under supervision of Dr.Xingyu Zeng. Responsible for the GOD-Pro's development and maintaining, which is a toolkit for ConvNet models deploying including 2d detection, landmarks, face direction,etc. Also concentrated on research about object detection and instance segmentation. Spent two months in Japan(Tokyo and Kyoto) to schedule the data collection route and conduct several times real-car tests for GOD-Pro.}\\\multicolumn{2}{c}{} \\
 
 
  \textsc{Jun 2017 - Sept 2017} & Research Intern at \textsc{Seetatech,Beijing} \\&\footnotesize{Worked as full-time intern under supervision of Dr.Jie Zhang and} \href{http://www.jdl.ac.cn/user/sgshan/index_en.htm}{Prof.Shiguang Shan.} \footnotesize{Help to remove waterwave on document photos with deep convolutional networks. Efficiently improve face detector's performance. Projects finished by myself went into production system.}\\\multicolumn{2}{c}{} \\
 
- \textsc{Jan 2016 - Jun 2017} & Research Intern at \textsc{ICT, Chinese Academic of Science} \\&\emph{Multimedia Group}\\&\footnotesize{Researched in visual tracking field, in particular human tracking, with emphasis on speed accelerating and performance improving. Familiar with basic deep learning knowledge and tools.}\\\multicolumn{2}{c}{} \\
- \textsc{June-Sept 2015} & Research Intern at \textsc{Tsinghua University}  \\&\emph{Division of Computer Science And Technology}\\& \footnotesize{Worked as a research intern with }\href{https://yutian.li/}{Yutian Li.} \footnotesize{Took part in innovative projects , with focus on problems about self-configuration, load balance. Became interested in machine learning technologies.}\\\multicolumn{2}{c}{} \\
+ \textsc{Jan 2016 - Jun 2017} & Research Intern at \textsc{ICT, Chinese Academic of Science} \\&\emph{Multimedia Group}\\&\footnotesize{Under supervision of Prof.Ke Gao. Researched in visual tracking field, in particular human tracking, with emphasis on speed accelerating and performance improving. Familiar with basic deep learning based computer vision technology and related tools.}\\\multicolumn{2}{c}{} \\
+ %\textsc{June-Sept 2015} & Research Intern at \textsc{Tsinghua University}  \\&\emph{Division of Computer Science And Technology}\\& \footnotesize{Worked as a research intern with }\href{https://yutian.li/}{Yutian Li.} \footnotesize{Took part in innovative projects, with focus on problems about self-configuration, load balance. Became interested in machine learning technologies.}\\\multicolumn{2}{c}{} 
 
 \end{tabular}
 %Section: Education
 \section{Education}
 \begin{tabular}{rl}	
 
- \textsc{Sept 2018 or later} - \textsc{} & Ph.D candidate\\
+ \textsc{Sept 2019 or later} - \textsc{} & Ph.D candidate\\
 & \textbf{University of Technology Sydney}\\
 & Under supervision of \href{https://sites.google.com/site/ianyyang2016/}{Prof.Yi Yang}. I am in gap year due to the VISA delay.\\
 \\
@@ -114,32 +114,45 @@ ItalicFont = Fontin-Italic.otf
 
  \textsc{Aug 2013} - \textsc{Jun 2017} & Bachelor of Engineering, \textsc{E-Commerce Engineering}\\
 & \textbf{Beijing University of posts and telecommunications}\\
-& Overall GPA:\textsc{87.42}, ranking: \textsc{4/172}  \\
+& Overall GPA:\textsc{85+/100}, ranking: \textsc{4/172}  \\
 
 \end{tabular}
 
 %Section: Languages
 \section{Projects}
-\begin{tabular}{rl}	
- \textsc{\href{}{WaveNet}} & \emph{Deep fully-convolutional network for waterwave removal}\\
-& Designed a deep fully-convolutional network for the specific task of removing \\
-& waterwave on document photoes, whose architecture combined the FCN and \\
-& ResNet-101. Experiments evaluated with different loss function design, including \\
-& pixel-wise loss , perceptual loss and GAN. This work improved the performance\\
-& of face detection and finally went into production system.\\
+\begin{tabular}{r|p{12cm}}	
+ \textsc{\href{}{GOD-Pro}} & \emph{General Object Detection toolkit for Autopilot Driving}\\
+& \footnotesize{Developed and maintained a toolkit which contains a standard video processor with control functionality and several algorithm modules with their associated functionality. Each algorithm module is integrated with the latest deep ConvNet model within group and corresponding interface with pre/post-processing. These core algorithms are for object perception,like 2d detection(tracking), 3d detection, face/body direction, vehicle classification, traffic light status, dense estimation,etc. Controler collects the outputs of all modules and visualize in real-time. This project has been merged into SenseTime’s autopilot driving system and undergone several real-car tests in highway or city road situation in Japan.}\\\multicolumn{2}{c}{}
 \\
+
+ \textsc{\href{}{VideoCaptioner}} & \emph{Generating captions for videos}\\
+& \footnotesize{Worked with Guang Li(Phd student in UTS) as UTS-CAI team in TRECVID 2018. Built an encoder-decoder framework for the task of video caption. For encoder, we used multi-feature fusion training(c3d, resnet101 and i3d), sequence level loss to improve the performance. For decoder, we used LSTM to generate the sentences and used beam search for performance boost. We tried reinforcement method to directly improve the score like BLEU4,METEOR,CIDEr but failed once change the dataset, seemed directly improving the score lead to bad generalization ability. We also tried convolutional encoding and 'Attention is all you need', which worked well in machine translation task, in video caption after TRECVID, and indeed improved the performance.
+The result finally ranked 2nd in \href{https://www-nlpir.nist.gov/projects/tv2018/Tasks/vtt/}{VTT} task.
+(Ranking: CMU, UTS(ours), UPC, NTU, kslab, ku-ispl; And for Runtype=N, we ranked 1st.)}\\\multicolumn{2}{c}{}
+\\
+\end{tabular}
+\section{}
+\begin{tabular}{r|p{12cm}}	
+ \textsc{\href{}{WaveNet}} & \emph{Deep fully-convolutional network for waterwave removal}\\
+& \footnotesize{Designed a deep fully-convolutional network for the specific task of removing 
+waterwave on document photoes, whose architecture combined the FCN and 
+ResNet-101. Experiments evaluated with different loss function design, including 
+pixel-wise loss , perceptual loss and GAN. This work improved the performance
+of face detection and finally went into production system.}\\\multicolumn{2}{c}{}
+\\
+
  \textsc{\href{https://github.com/rao1219/MDNet}{MDNet+}} & \emph{An improved tracking framework for human target}\\
-& Reimplemented MDNet with Caffe. Accelerated the online tracking speed. Imp\\
-& -roved human tracking representation ability with supplementary training on\\
-& self-built dataset.\\
+& \footnotesize{Reimplemented MDNet with Caffe. Accelerated the online tracking speed. Improved human tracking representation ability with supplementary training on
+self-built dataset.}\\\multicolumn{2}{c}{} 
 \\
 
  \textsc{\href{https://github.com/rao1219/intel_cup-3Dcamera}{PoseDetector}} & \emph{Human pose detection and reminding system}\\
-& Obtained the skeleton information by 3d camera, implemented self-refinement \\
-& algorithm to judge human pose in real-time.\\ 
-\\
- \textsc{\href{https://github.com/rao1219/olhandicrafts}{Olrenting}} & \emph{A generic E-commerce online shopping framework}\\
+&\footnotesize{Obtained the skeleton information by 3d camera, implemented self-refinement 
+algorithm to judge human pose in real-time.}\\\multicolumn{2}{c}{}\\
+\textsc{\href{https://github.com/rao1219/olhandicrafts}{Olrenting}} & \emph{A generic E-commerce online shopping framework}\\\multicolumn{2}{c}{} 
+
 \end{tabular}
+
 
 
 %Section: Scholarships and additional info
